@@ -4,6 +4,13 @@ Every ability you use makes a meme noise. That is the whole addon.
 
 Built for **World of Warcraft: Forever** (interface 16001).
 
+**This one is not published.** The whole point is recognisable meme clips, and
+those are not mine to hand out. CurseForge said as much, and they were right.
+Free licensed replacements exist but they are amateur recordings of a trombone
+in somebody's living room, which is not the same joke at all. So it stays here:
+clone it, drop your own sounds into `Sounds/`, name them after the entries in
+`/goofy list`, and play.
+
 ## It sets itself up
 
 There is nothing to configure before you start. Play normally: the first time
