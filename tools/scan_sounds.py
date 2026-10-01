@@ -7,7 +7,7 @@ Run this after adding or removing files.
 import os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ADDON = os.path.join(os.path.dirname(HERE), "GoofyAhhForever")
+ADDON = os.path.dirname(HERE)   # the addon now lives at the repo root
 SOUNDS = os.path.join(ADDON, "Sounds")
 OUT = os.path.join(ADDON, "Sounds.lua")
 PLAYABLE = (".ogg", ".mp3")

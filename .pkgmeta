@@ -8,6 +8,5 @@ ignore:
   - tools
   - .github
   - README.md
-  - CHANGELOG.md
   - sync.sh
   - .gitignore
