@@ -195,7 +195,12 @@ local function Refresh()
 
     window.content:SetHeight(math.max(1, #list * ROW_HEIGHT))
     window.empty:SetShown(#list == 0)
-    window.sounds:SetText(("%d sounds installed"):format(#ns:SoundList()))
+    local usable, total = #ns:UsableSounds(), #ns:SoundList()
+    if usable == total then
+        window.sounds:SetText(("%d sound names, none ruled out yet"):format(total))
+    else
+        window.sounds:SetText(("%d of %d names have a file behind them"):format(usable, total))
+    end
     window.enabled:SetText(ns.db.enabled and "Sounds: on" or "Sounds: off")
     window.auto:SetText(ns.db.autoAssign and "Auto assign: on" or "Auto assign: off")
     window.target:SetText(ns.db.targetCasts and "Target casts: on" or "Target casts: off")
@@ -378,13 +383,17 @@ SlashCmdList["GOOFY"] = function(input)
     elseif input == "reroll" then
         ns:RerollAll()
         ns:Print("Sounds shuffled again.")
+    elseif input == "rescan" then
+        ns:ForgetMissing()
+        ns:Print("Forgot which files were missing. Added some? They will be picked up now.")
     elseif input == "list" then
-        ns:Print(("%d sounds installed:"):format(#ns:SoundList()))
+        ns:Print("Sound names it looks for in the Sounds folder:")
         for _, entry in ipairs(ns:SoundList()) do
-            ns:Print(("  %s  (%s)"):format(entry.name, entry.file))
+            ns:Print(("  %-18s %s%s"):format(entry.name, entry.file,
+                ns.db.missing[entry.file] and "   (no file)" or ""))
         end
     else
-        ns:Print("Commands: /goofy (window), on, off, chance <n>, random, fixed, target, minimap, reroll, list")
+        ns:Print("Commands: /goofy (window), on, off, chance <n>, random, fixed, target, rescan, minimap, reroll, list")
     end
 end
 

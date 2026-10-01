@@ -21,6 +21,7 @@ local defaults = {
     triggers = {},           -- [key] = { sound, muted }
     targetCasts = false,     -- off by default: it is a lot of noise
     bag = {},                -- shuffled sounds left to hand out
+    missing = {},            -- files the game could not play, learned as we go
     minimap = { angle = 200, hide = false },
 }
 
@@ -75,6 +76,21 @@ function ns:SoundList()
     return ns.SOUNDS or {}
 end
 
+-- Names we have not already proven to be missing
+function ns:UsableSounds()
+    local list = {}
+    for _, entry in ipairs(self:SoundList()) do
+        if not self.db.missing[entry.file] then list[#list + 1] = entry end
+    end
+    return list
+end
+
+function ns:ForgetMissing()
+    self.db.missing = {}
+    self.db.bag = {}
+    self:Fire("ASSIGNMENTS_CHANGED")
+end
+
 function ns:SoundName(file)
     for _, entry in ipairs(self:SoundList()) do
         if entry.file == file then return entry.name end
@@ -82,11 +98,19 @@ function ns:SoundName(file)
     return file
 end
 
+-- PlaySoundFile reports whether the file could be played at all, so a name
+-- with no file behind it is noticed once and then skipped forever. That is what
+-- lets the addon ship with a list of names and no audio.
 function ns:Play(file)
     if not file then return false end
     local ok, played = pcall(PlaySoundFile, SOUND_PATH .. file, self.db.channel)
-    -- PlaySoundFile returns false when the file is missing or unplayable
-    return ok and played ~= false
+    local worked = ok and played ~= false
+    if not worked then
+        self.db.missing[file] = true
+    elseif self.db.missing[file] then
+        self.db.missing[file] = nil
+    end
+    return worked
 end
 
 --------------------------------------------------------------------------------
@@ -101,7 +125,10 @@ function ns:DrawSound()
 
     if #self.db.bag == 0 then
         local pool = {}
-        for _, entry in ipairs(list) do pool[#pool + 1] = entry.file end
+        for _, entry in ipairs(list) do
+            if not self.db.missing[entry.file] then pool[#pool + 1] = entry.file end
+        end
+        if #pool == 0 then return nil end
         for i = #pool, 2, -1 do
             local j = math.random(i)
             pool[i], pool[j] = pool[j], pool[i]
