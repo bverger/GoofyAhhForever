@@ -1,8 +1,0 @@
-<Bindings>
-	<Binding name="GOOFYAHHFOREVER_TOGGLE" header="GOOFYAHHFOREVER">
-		GoofyAhhForever_ToggleSounds()
-	</Binding>
-	<Binding name="GOOFYAHHFOREVER_WINDOW">
-		GoofyAhhForever_ToggleWindow()
-	</Binding>
-</Bindings>

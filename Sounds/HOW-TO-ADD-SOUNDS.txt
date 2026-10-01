@@ -1,22 +1,20 @@
-No sounds ship with this addon. They are internet meme clips and they are not
-mine to hand out, so you bring your own.
+The .ogg files in this folder ship with the addon and are free licensed. See
+CREDITS.md for the author and licence of each one.
 
-1. Find the sounds you want. Any site that lets you download them works, and
-   .mp3 or .ogg are both fine.
+The meme clips are not here, because they are not mine to hand out. Adding them
+takes a minute:
 
-2. Drop the files in this folder.
+1. Download the ones you want. .mp3 and .ogg both work.
 
-3. Name them after any entry the addon looks for. Type /goofy list in game to
-   see the full list. The quickest ones:
+2. Drop them in this folder.
+
+3. Name them after any entry the addon is looking for. Type /goofy list in game
+   for the whole list. The ones waiting for a file:
 
        vineboom.mp3      bruh.mp3         metalpipe.mp3
        emotionaldamage.mp3   augh.mp3     bonk.mp3
        huhcat.mp3        violin.mp3       windowserror.mp3
        fart.mp3          goofylaugh.mp3   sneezeboom.mp3
 
-   Or use the free slots: custom1.mp3 through custom20.mp3.
-
-4. Reload the game (/reload) and play. Names with no file behind them are
-   noticed the first time they fail and skipped from then on.
-
-If you add files later, run /goofy rescan so the addon stops ignoring them.
+4. /reload, and run /goofy rescan so the addon stops skipping the names it had
+   already written off.

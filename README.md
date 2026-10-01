@@ -39,20 +39,21 @@ Open `/goofy` to change anything:
 - `/goofy on`, `/goofy off`, `/goofy chance 30`, `/goofy random`, `/goofy fixed`,
   `/goofy target`, `/goofy minimap`, `/goofy reroll`, `/goofy list`
 
-## You bring the sounds
+## The sounds
 
-None ship with the addon. They are internet meme clips and they are not mine to
-hand out.
+Thirteen ship with it and it works the moment you install it: a sad trombone, a
+boing, a cartoon punch, a buzzer, a gong, an explosion, applause, a whoopee
+cushion, a scream, a moo, a drum roll, a whoosh and a cartoon laugh. All of
+them come from Wikimedia Commons under free licences, credited file by file in
+CREDITS.md, converted to Ogg and loudness matched so none of them takes your
+ears off.
 
-Drop your own `.mp3` or `.ogg` files into the `Sounds` folder, named after any
-entry the addon looks for. `/goofy list` prints them all: the twelve usual
-suspects are already in the list under the names people normally save them as
-(`vineboom.mp3`, `bruh.mp3`, `metalpipe.mp3` and so on), plus twenty free slots
-called `custom1.mp3` through `custom20.mp3`.
-
-A name with no file behind it is noticed the first time it fails to play and
-skipped from then on, so the entries you never fill cost you nothing. Run
-`/goofy rescan` if you add files later.
+What does **not** ship is the actual meme clips, because those are not mine to
+hand out. The names are in the list anyway: drop `vineboom.mp3`, `bruh.mp3`,
+`metalpipe.mp3` or any other entry from `/goofy list` into the `Sounds` folder
+and it starts working immediately. A name with no file behind it is noticed the
+first time it fails to play and skipped from then on, so the empty ones cost
+you nothing. Run `/goofy rescan` after adding files.
 
 ## Not possible on this client
 
