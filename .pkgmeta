@@ -1,0 +1,13 @@
+package-as: GoofyAhhForever
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+ignore:
+  - tools
+  - .github
+  - README.md
+  - CHANGELOG.md
+  - sync.sh
+  - .gitignore
