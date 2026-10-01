@@ -6,7 +6,6 @@ manual-changelog:
 
 ignore:
   - Sounds/*.mp3
-  - Sounds/*.ogg
   - tools
   - .github
   - README.md

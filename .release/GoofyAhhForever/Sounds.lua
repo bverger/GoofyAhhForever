@@ -1,17 +1,33 @@
 --------------------------------------------------------------------------------
 -- Goofy Ahh Forever - Sounds.lua
 --
--- No audio ships with this addon: those clips are not mine to hand out. This is
--- the list of file names it looks for inside Sounds/. Drop your own files in
--- with any of these names and they work immediately.
+-- The game cannot list a folder, so every sound has to be named here.
 --
--- A name whose file is missing is noticed the first time it fails to play and
--- skipped from then on, so unused slots cost you nothing.
+-- The .ogg files ship with the addon and are free licensed (see CREDITS.md).
+-- The .mp3 names below ship empty on purpose: those are the meme clips, which
+-- are not mine to hand out. Drop your own in Sounds/ with these names and they
+-- start working. A name with no file behind it is noticed the first time it
+-- fails to play and skipped from then on.
 --------------------------------------------------------------------------------
 local ADDON, ns = ...
 
 ns.SOUNDS = {
-    -- The usual suspects, under the names people normally save them as
+    -- Included, free licensed
+    { name = "Applause", file = "applause.ogg" },
+    { name = "Boing", file = "boing.ogg" },
+    { name = "Buzzer", file = "buzzer.ogg" },
+    { name = "Cartoon laugh", file = "cartoonlaugh.ogg" },
+    { name = "Drum roll", file = "drumroll.ogg" },
+    { name = "Explosion", file = "explosion.ogg" },
+    { name = "Gong", file = "gong.ogg" },
+    { name = "Moo", file = "moo.ogg" },
+    { name = "Cartoon punch", file = "punch.ogg" },
+    { name = "Sad trombone", file = "sadtrombone.ogg" },
+    { name = "Scream", file = "scream.ogg" },
+    { name = "Whoopee cushion", file = "whoopee.ogg" },
+    { name = "Whoosh", file = "whoosh.ogg" },
+
+    -- Bring your own: name the file like this and it works
     { name = "Vine boom", file = "vineboom.mp3" },
     { name = "Bruh", file = "bruh.mp3" },
     { name = "Metal pipe", file = "metalpipe.mp3" },
@@ -24,26 +40,4 @@ ns.SOUNDS = {
     { name = "Fart", file = "fart.mp3" },
     { name = "Goofy laugh", file = "goofylaugh.mp3" },
     { name = "Sneeze boom", file = "sneezeboom.mp3" },
-
-    -- Free slots: rename anything to custom1.mp3, custom2.mp3 and so on
-    { name = "Custom 1", file = "custom1.mp3" },
-    { name = "Custom 2", file = "custom2.mp3" },
-    { name = "Custom 3", file = "custom3.mp3" },
-    { name = "Custom 4", file = "custom4.mp3" },
-    { name = "Custom 5", file = "custom5.mp3" },
-    { name = "Custom 6", file = "custom6.mp3" },
-    { name = "Custom 7", file = "custom7.mp3" },
-    { name = "Custom 8", file = "custom8.mp3" },
-    { name = "Custom 9", file = "custom9.mp3" },
-    { name = "Custom 10", file = "custom10.mp3" },
-    { name = "Custom 11", file = "custom11.mp3" },
-    { name = "Custom 12", file = "custom12.mp3" },
-    { name = "Custom 13", file = "custom13.mp3" },
-    { name = "Custom 14", file = "custom14.mp3" },
-    { name = "Custom 15", file = "custom15.mp3" },
-    { name = "Custom 16", file = "custom16.mp3" },
-    { name = "Custom 17", file = "custom17.mp3" },
-    { name = "Custom 18", file = "custom18.mp3" },
-    { name = "Custom 19", file = "custom19.mp3" },
-    { name = "Custom 20", file = "custom20.mp3" },
 }

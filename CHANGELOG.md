@@ -2,19 +2,20 @@
 
 ## 1.0.1
 
-No sounds ship with the addon any more. They were internet meme clips, they
-were never mine to hand out, and CurseForge was right to say so.
+CurseForge was right: the meme clips were never mine to distribute, so they are
+gone from the package.
 
-What you get instead is a list of file names it looks for, which costs nothing
-and works the same once you supply the files:
+What ships instead is thirteen free licensed sounds from Wikimedia Commons,
+credited file by file in CREDITS.md: a sad trombone, a boing, a cartoon punch,
+a buzzer, a gong, an explosion, applause, a whoopee cushion and friends. All
+converted to Ogg and loudness matched, so the addon works the moment you
+install it.
 
-- Drop your own .mp3 or .ogg files into the Sounds folder, named after any
-  entry in `/goofy list`. The twelve usual suspects are already in the list
-  under the names people normally save them as, plus twenty free slots
-  (custom1.mp3 and friends).
-- A name with no file behind it is noticed the first time it fails to play and
-  skipped from then on, so the unused entries cost you nothing.
-- `/goofy rescan` after adding files, so it stops ignoring the new ones.
+The meme names are still in the list, just without files behind them. Drop
+`vineboom.mp3` or `bruh.mp3` into the Sounds folder and they start working. A
+name with no file is noticed the first time it fails to play and skipped from
+then on, so the empty slots cost you nothing. `/goofy rescan` after adding
+files.
 
 ## 1.0.0
 
