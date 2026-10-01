@@ -5,6 +5,8 @@ manual-changelog:
   markup-type: markdown
 
 ignore:
+  - Sounds/*.mp3
+  - Sounds/*.ogg
   - tools
   - .github
   - README.md

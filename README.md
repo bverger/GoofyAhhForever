@@ -39,12 +39,20 @@ Open `/goofy` to change anything:
 - `/goofy on`, `/goofy off`, `/goofy chance 30`, `/goofy random`, `/goofy fixed`,
   `/goofy target`, `/goofy minimap`, `/goofy reroll`, `/goofy list`
 
-## The sounds
+## You bring the sounds
 
-Twelve of the usual suspects, levelled so one does not blow your ears off while
-another is inaudible. They are meme clips from public archives, not mine. Drop
-your own `.ogg` or `.mp3` files into `Sounds/` and run `tools/scan_sounds.py` to
-register them, or ask for the file names you need.
+None ship with the addon. They are internet meme clips and they are not mine to
+hand out.
+
+Drop your own `.mp3` or `.ogg` files into the `Sounds` folder, named after any
+entry the addon looks for. `/goofy list` prints them all: the twelve usual
+suspects are already in the list under the names people normally save them as
+(`vineboom.mp3`, `bruh.mp3`, `metalpipe.mp3` and so on), plus twenty free slots
+called `custom1.mp3` through `custom20.mp3`.
+
+A name with no file behind it is noticed the first time it fails to play and
+skipped from then on, so the entries you never fill cost you nothing. Run
+`/goofy rescan` if you add files later.
 
 ## Not possible on this client
 

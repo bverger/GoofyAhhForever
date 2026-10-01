@@ -2,7 +2,7 @@
 ## Title: Goofy Ahh Forever
 ## Notes: Plays a meme sound every time you use an ability. Tuned by not tuning anything.
 ## Author: bverger
-## Version: 1.0.0
+## Version: 1.0.1
 ## IconTexture: Interface\Icons\INV_Misc_Horn_01
 ## SavedVariables: GoofyAhhForeverDB
 ## X-License: MIT
